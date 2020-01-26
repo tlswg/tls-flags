@@ -91,11 +91,11 @@
                 ]]></artwork>
             </figure>
             <t> This document also defines the data for this extension as a variable-length bit string,
-                allowing for the encoding of an unbounded number of features.</t>  
+                allowing for the encoding of up to 2048 features.</t>  
             <figure> 
                 <artwork><![CDATA[
    struct {
-      uint8 flags<0..31>;
+      opaque flags<0..255>;
    } FlagExtensions;
                 ]]></artwork>
             </figure>
@@ -144,7 +144,7 @@
             <t> IANA is also requested to create a new registry under the TLS namespace with name "TLS Flags"
                 and the following fields:
                 <list style="symbols">
-                   <t> Value, which is a number between 0 and 63. All potential values are available for
+                   <t> Value, which is a number between 0 and 2047. All potential values are available for
                        assignment.</t>
                    <t> Flag Name, which is a string</t>
                    <t> Message, which like the "TLS 1.3" field in the ExtensionType registry contains the
@@ -170,6 +170,7 @@
                 Mavrogiannopoulos.</t>
             <t> Improvement to the encoding were suggested by Ilari Liusvaara, who also asked for a better 
                 explanation of the semantics of missing extensions.</t>
+            <t> Useful comments received from Martin Thomson
         </section>
     </middle>
     <back>
@@ -186,6 +187,7 @@
         <section anchor="changelog" title="Change Log">
             <t> RFC EDITOR: PLEASE REMOVE THIS SECTION AS IT IS ONLY MEANT TO AID THE WORKING GROUP IN TRACKING
                 CHANGES TO THIS DOCUMENT.</t>
+            <t> draft-ietf-tls-tlsflags-02 set the maximum number of flags to 2048.
             <t> draft-ietf-tls-tlsflags-01 allows server-only flags and allows the client to send an empty 
                 extension. Also modified the packing order of the bits.</t>
             <t> draft-ietf-tls-tlsflags-00 had the same text as draft-nir-tls-tlsflags-02, and was re-submitted

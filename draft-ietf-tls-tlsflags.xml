@@ -91,7 +91,7 @@
                 ]]></artwork>
             </figure>
             <t> This document also defines the data for this extension as a variable-length bit string,
-                allowing for the encoding of up to 2048 features.</t>  
+                allowing for the encoding of up to 2040 features.</t>  
             <figure> 
                 <artwork><![CDATA[
    struct {

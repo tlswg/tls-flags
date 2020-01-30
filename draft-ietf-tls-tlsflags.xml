@@ -144,7 +144,7 @@
             <t> IANA is also requested to create a new registry under the TLS namespace with name "TLS Flags"
                 and the following fields:
                 <list style="symbols">
-                   <t> Value, which is a number between 0 and 2047. All potential values are available for
+                   <t> Value, which is a number between 0 and 2039. All potential values are available for
                        assignment.</t>
                    <t> Flag Name, which is a string</t>
                    <t> Message, which like the "TLS 1.3" field in the ExtensionType registry contains the

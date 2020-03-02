@@ -20,11 +20,11 @@
 <!ENTITY I-D.ietf-tls-tls13-cert-with-extern-psk PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-tls-tls13-cert-with-extern-psk.xml">
 ]>
 
-<rfc category="std" docName="draft-ietf-tls-tlsflags-01" ipr="trust200902">
+<rfc category="std" docName="draft-ietf-tls-tlsflags-02" ipr="trust200902">
     <front>
         <title abbrev="TLS Flags">A Flags Extension for TLS 1.3</title>
         <author initials="Y." surname="Nir" fullname="Yoav Nir">
-            <organization >Dell Technologies</organization>
+            <organization>Dell Technologies</organization>
             <address>
                 <postal>
                     <street>9 Andrei Sakharov St</street>

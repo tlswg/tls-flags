@@ -116,6 +116,8 @@
                 <figure><artwork><![CDATA[
    00101000 00000000 10000000
                 ]]></artwork></figure>
+            <t> An implementation that receives an all-zero value for this extension or a value that contains 
+                trailing zero bytes MUST generate a fatal illegal_parameter alert.</t>
             <t> Note that this document does not define any particular bits for this string. That is left to
                 the protocol documents such as the ones in the examples from the previous section. Such
                 documents will have to define which bit to set to show support, and the order of the bits

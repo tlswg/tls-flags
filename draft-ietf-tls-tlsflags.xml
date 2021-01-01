@@ -131,12 +131,13 @@
             <t> A server that supports this extension and also supports at least one of the flag-type features
                 that use this extension and that were declared by the ClientHello extension SHALL send this
                 extension with the intersection of the flags it supports with the flags declared by the client.
-                The intersection operation MAY be implemented as a bitwise AND. The server may need to send two
-                tls_flags extensions, one in the ServerHello and the other in the EncryptedExtensions message.
+                The intersection operation MAY be implemented as a bitwise AND. The server may need to send more than one
+                tls_flags extensions, up to one in each of the messages that may carry extensions: ServerHello, 
+                EncryptedExtensions, Certificate, and NewSessionTicket.
                 It is up to the document for the specific feature to determine whether support should be
-                acknowledged in the ServerHello or the EncryptedExtensions message.</t>
+                acknowledged in the ServerHello, in the EncryptedExtensions, or in one of the other messages.</t>
             <t> A server MUST NOT indicate support for any flag-type feature not previously indicated by the 
-                client. It MUST NOT include this extension in either message (ServerHello or EncryptedExtensions)
+                client. It MUST NOT include this extension in any of the four messages 
                 if it has no appropriate flag-type to indicate. This extension MUST NOT be included empty.</t>
         </section>
         <section anchor="iana" title="IANA Considerations">
@@ -192,6 +193,10 @@
                 otherwise be expressed in individual extensions. It does not send in the clear any information
                 that would otherwise be sent encrypted, nor vice versa. For this reason this extension is
                 neutral as far as security is concerned.</t>
+            <t> Extension authors should be aware that acknowledging flags in a tls_flags extension of the 
+                ServerHello message exposes this response to passive observers. Unless there is a special 
+                reason to place the response in the ServerHello, most flags should go in the EncryptedExtensions
+                message.</t>
         </section>
         <section title="Acknowledgements">
             <t> The idea for writing this was expressed at the mic during the TLS session at IETF 104 by Eric

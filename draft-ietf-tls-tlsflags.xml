@@ -132,12 +132,19 @@
                 that use this extension and that were declared by the ClientHello extension SHALL send this
                 extension with the intersection of the flags it supports with the flags declared by the client.
                 The intersection operation may be implemented as a bitwise AND. The server may need to send multiple
-                tls_flags extensions, up to one in each of the messages that may carry extensions: ServerHello (SH), EncryptedExtensions (EE), Certificate (CT), CertificateRequest (CR), NewSessionTicket (NST), and HelloRetryRequest (HRR). 
-                It is up to the document for the specific feature to determine whether support should be
-                acknowledged in the ServerHello, in the EncryptedExtensions, or in one of the other messages.</t>
+                tls_flags extensions, up to one in each of the response messages that may carry extensions: 
+                ServerHello (SH), EncryptedExtensions (EE), Certificate (CT), and HelloRetryRequest (HRR). 
+                It is up to the document for the specific feature to determine which of these should be used to
+                acknowledge support.</t>
             <t> A server MUST NOT indicate support for any flag-type feature not previously indicated by the 
-                client. It MUST NOT include this extension in any of the four messages 
+                client in the ClientHello in any response message. It MUST NOT include this extension in any of the four messages 
                 if it has no appropriate flag-type to indicate. This extension MUST NOT be included empty.</t>
+            <t> A server MAY indicate support for flag-type features in a flags extension of CertificateRequest (CR). 
+                Flag-type extensions that have been indicated in CR (and only such extensions) MAY be also be present
+                in a flags extension of the Certificate (CT) message sent by the client.</t>
+            <t> A server MAY indicate support for flag-type features in a flags extension of NewSessionTicket (NST).
+                This message has no client-side response.</t>
+            <t> In Summary, unsolicited flags may appear only in ClientHello, CertificateRequest, and NewSessionTicket.</t>
         </section>
         <section anchor="iana" title="IANA Considerations">
             <t> IANA is requested to assign a new value from the TLS ExtensionType Values registry:
@@ -204,7 +211,7 @@
             <t> Improvement to the encoding were suggested by Ilari Liusvaara, who also asked for a better 
                 explanation of the semantics of missing extensions.</t>
             <t> Useful comments received from Martin Thomson, including the suggestion to eliminate the option
-                to have the server send unsolicited flag types.</t>
+                to have the server send unsolicited flag types and the rules for where unsolicited flags can appear.</t>
         </section>
     </middle>
     <back>

@@ -141,7 +141,9 @@
                 if it has no appropriate flag-type to indicate. This extension MUST NOT be included empty.</t>
             <t> A server MAY indicate support for flag-type features in a flags extension of CertificateRequest (CR). 
                 Flag-type extensions that have been indicated in CR (and only such extensions) MAY be also be present
-                in a flags extension of the Certificate (CT) message sent by the client.</t>
+                in a flags extension of the Certificate (CT) message sent by the client. However, a client MUST NOT indicate 
+                support for any flag-type feature in a Certificate message that was not previously indicated by the server 
+                in its CertificateRequest message.</t>
             <t> A server MAY indicate support for flag-type features in a flags extension of NewSessionTicket (NST).
                 This message has no client-side response.</t>
             <t> In summary, unsolicited flags may appear only in ClientHello, CertificateRequest, and NewSessionTicket.</t>

@@ -132,7 +132,7 @@
                 that use this extension and that were declared by the ClientHello extension SHALL send this
                 extension with the intersection of the flags it supports with the flags declared by the client.
                 The intersection operation may be implemented as a bitwise AND. The server may need to send multiple
-                tls_flags extensions, up to one in each of the response messages that may carry extensions: 
+                tls_flags extensions, up to one in each of the four response messages that may carry extensions: 
                 ServerHello (SH), EncryptedExtensions (EE), Certificate (CT), and HelloRetryRequest (HRR). 
                 It is up to the document for the specific feature to determine which of these should be used to
                 acknowledge support.</t>

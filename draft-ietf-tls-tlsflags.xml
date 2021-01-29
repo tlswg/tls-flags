@@ -144,7 +144,7 @@
                 in a flags extension of the Certificate (CT) message sent by the client.</t>
             <t> A server MAY indicate support for flag-type features in a flags extension of NewSessionTicket (NST).
                 This message has no client-side response.</t>
-            <t> In Summary, unsolicited flags may appear only in ClientHello, CertificateRequest, and NewSessionTicket.</t>
+            <t> In summary, unsolicited flags may appear only in ClientHello, CertificateRequest, and NewSessionTicket.</t>
         </section>
         <section anchor="iana" title="IANA Considerations">
             <t> IANA is requested to assign a new value from the TLS ExtensionType Values registry:

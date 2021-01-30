@@ -131,13 +131,22 @@
             <t> A server that supports this extension and also supports at least one of the flag-type features
                 that use this extension and that were declared by the ClientHello extension SHALL send this
                 extension with the intersection of the flags it supports with the flags declared by the client.
-                The intersection operation MAY be implemented as a bitwise AND. The server may need to send two
-                tls_flags extensions, one in the ServerHello and the other in the EncryptedExtensions message.
-                It is up to the document for the specific feature to determine whether support should be
-                acknowledged in the ServerHello or the EncryptedExtensions message.</t>
+                The intersection operation may be implemented as a bitwise AND. The server may need to send multiple
+                tls_flags extensions, up to one in each of the four response messages that may carry extensions: 
+                ServerHello (SH), EncryptedExtensions (EE), Certificate (CT), and HelloRetryRequest (HRR). 
+                It is up to the document for the specific feature to determine which of these should be used to
+                acknowledge support.</t>
             <t> A server MUST NOT indicate support for any flag-type feature not previously indicated by the 
-                client. It MUST NOT include this extension in either message (ServerHello or EncryptedExtensions)
+                client in the ClientHello in any response message. It MUST NOT include this extension in any of the four messages 
                 if it has no appropriate flag-type to indicate. This extension MUST NOT be included empty.</t>
+            <t> A server MAY indicate support for flag-type features in a flags extension of CertificateRequest (CR). 
+                Flag-type extensions that have been indicated in CR (and only such extensions) MAY be also be present
+                in a flags extension of the Certificate (CT) message sent by the client. However, a client MUST NOT indicate 
+                support for any flag-type feature in a Certificate message that was not previously indicated by the server 
+                in its CertificateRequest message.</t>
+            <t> A server MAY indicate support for flag-type features in a flags extension of NewSessionTicket (NST).
+                This message has no client-side response.</t>
+            <t> In summary, unsolicited flags may appear only in ClientHello, CertificateRequest, and NewSessionTicket.</t>
         </section>
         <section anchor="iana" title="IANA Considerations">
             <t> IANA is requested to assign a new value from the TLS ExtensionType Values registry:
@@ -192,6 +201,9 @@
                 otherwise be expressed in individual extensions. It does not send in the clear any information
                 that would otherwise be sent encrypted, nor vice versa. For this reason this extension is
                 neutral as far as security is concerned.</t>
+            <t> Extension authors should be aware that acknowledging flags in a tls_flags extension of the 
+                ServerHello and HelloRetryRequest messages expose this response to passive observers. Unless there is a special 
+                reason to place the response in the ServerHello, most flags should go in other (encrypted) messages.</t>
         </section>
         <section title="Acknowledgements">
             <t> The idea for writing this was expressed at the mic during the TLS session at IETF 104 by Eric
@@ -201,7 +213,7 @@
             <t> Improvement to the encoding were suggested by Ilari Liusvaara, who also asked for a better 
                 explanation of the semantics of missing extensions.</t>
             <t> Useful comments received from Martin Thomson, including the suggestion to eliminate the option
-                to have the server send unsolicited flag types.</t>
+                to have the server send unsolicited flag types and the rules for where unsolicited flags can appear.</t>
         </section>
     </middle>
     <back>

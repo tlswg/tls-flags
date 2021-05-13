@@ -18,8 +18,8 @@
 <!ENTITY RFC5746 PUBLIC "" "http://xml.resource.org/public/rfc/bibxml/reference.RFC.5746.xml">
 <!ENTITY I-D.sy-tls-resumption-group PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.sy-tls-resumption-group.xml">
 <!ENTITY I-D.ietf-tls-tls13-cert-with-extern-psk PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-tls-tls13-cert-with-extern-psk.xml">
-]>
 <!ENTITY I-D.ietf-tls-cross-sni-resumption PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-tls-cross-sni-resumption.xml">
+]>
 
 <rfc category="std" docName="draft-ietf-tls-tlsflags-05" ipr="trust200902">
     <front>

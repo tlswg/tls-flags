@@ -64,10 +64,10 @@
             <t> This document proposes a single extension called tls_flags that can enumerate such flag
                 extensions and allowing both client and server to indicate support for optional features in a
                 concise way.</t>
-            <t> None of the current proposed extensions are such that the server indicates support without the
-                client first indicating support. This specification enforces this restriction by specifying 
-                in <xref target="rules"/> that server bits may only reflect flags for which the client 
-                extension has already indicated support.</t> 
+            <t> None of the current proposed extensions are such that the extension receiver indicates support 
+                without the extension sender first indicating support. This specification enforces this restriction 
+                by specifying in <xref target="rules"/> that receiver bits may only reflect flags for which the 
+                sender extension has already indicated support.</t> 
             <section anchor="mustshouldmay" title="Requirements and Other Notation">
                 <t> The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT",
                     "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in

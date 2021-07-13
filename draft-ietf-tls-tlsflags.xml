@@ -21,7 +21,7 @@
 <!ENTITY I-D.ietf-tls-cross-sni-resumption PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-tls-cross-sni-resumption.xml">
 ]>
 
-<rfc category="std" docName="draft-ietf-tls-tlsflags-05" ipr="trust200902">
+<rfc category="std" docName="draft-ietf-tls-tlsflags-06" ipr="trust200902">
     <front>
         <title abbrev="TLS Flags">A Flags Extension for TLS 1.3</title>
         <author initials="Y." surname="Nir" fullname="Yoav Nir">
@@ -64,10 +64,12 @@
             <t> This document proposes a single extension called tls_flags that can enumerate such flag
                 extensions and allowing both client and server to indicate support for optional features in a
                 concise way.</t>
-            <t> None of the current proposed extensions are such that the server indicates support without the
-                client first indicating support. This specification enforces this restriction by specifying 
-                in <xref target="rules"/> that server bits may only reflect flags for which the client 
-                extension has already indicated support.</t> 
+            <t> None of the current proposed extensions allow for indication of support in ServerHello (SH), 
+                EncryptedExtensions (EE), Certificate (CT), or HelloRetryRequest (HRR) without first being 
+                indicated in ClientHello (CH). Similarly, none of the current proposed extensions allow for an
+                indication of support in the client-side Certificate (CT) message without first being indicated 
+                in the server's CertificateRequest (CR) message. This restriction is enforced by the rules in 
+                <xref target="rules"/>.</t> 
             <section anchor="mustshouldmay" title="Requirements and Other Notation">
                 <t> The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT",
                     "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in

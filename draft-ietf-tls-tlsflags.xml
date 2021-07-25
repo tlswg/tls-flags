@@ -177,7 +177,7 @@
                 target="RFC8126"/>.</t>
             <t> The initial contents of the registry shall be one entry, as follows:
                 <list style="symbols">
-                    <t> Value shall be 0x8 </t>
+                    <t> Value shall be 8 </t>
                     <t> Flag Name shall be resumption_across_names </t>
                     <t> Message shall be NST </t>
                     <t> Recommended shall be set to no (N) </t>
@@ -197,7 +197,8 @@
                         request to assign a low number.</t>
                     <t> Flags 8-31 are for standards-track documents that the experts believe will see wide 
                         adoption among either all users of TLS or a significant group of TLS users. For example,
-                        an extension that will be used by all web clients or all smart objects.</t>
+                        an extension that will be used by all web clients or all smart objects. The only entry
+                        in the initial registry is from this range.</t>
                     <t> Flags 32-63 are for other documents, including experimental, that are likely to see 
                         significant adoption.</t>
                     <t> Flags 64-79 are not to be allocated. They are for reserved for private use.</t>

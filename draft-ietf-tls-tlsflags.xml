@@ -103,10 +103,10 @@
    } FlagExtensions;
                 ]]></artwork>
             </figure>
-            <t> The FlagExtensions field 8 flags with each octet, and its length is the minimal length that
+            <t> The FlagExtensions field contains 8 flags in each octet. The length of the extension is the minimal length that
                 allows it to encode all of the present flags. Within each octet, the bits are packed such that
-                the first bit is the LSB and the seventh bit is the MSB. The first octet holds flags 0-7, the
-                second octet holds bits 8-15 and so on. For example, if we want to encode only flag 
+                the first bit is the least significant bit and the eighth bit is the most significant. Using zero-based indexing, the first octet holds flags 0-7, the
+                second octet holds bits 8-15 and so on. For example, if we want to encode only flag
                 number zero, the FlagExtension field will be 1 octet long, that is encoded as follows:</t>
                 <figure><artwork><![CDATA[
    00000001

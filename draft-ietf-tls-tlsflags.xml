@@ -99,7 +99,7 @@
             <figure> 
                 <artwork><![CDATA[
    struct {
-      opaque flags<0..255>;
+      opaque flags<1..255>;
    } FlagExtensions;
                 ]]></artwork>
             </figure>
@@ -151,12 +151,7 @@
                 This message has no client-side response.</t>
             <t> In summary, unsolicited flags may appear only in ClientHello, CertificateRequest, and NewSessionTicket.</t>
             <t> An implementation that receives an invalid tls_flags extension MUST terminate the TLS handshake with a
-                fatal illegal_parameter alert. Such invalid tls_flags extensions include: <list style="symbols">
-                <t> A zero-length extension</t>
-                <t> Multiple tls_flags extensions for the same message </t>
-                <t> A flag set in the tls_flags extension of the wrong message, as specified in the document for that flag </t>
-                <t> A flag set in a response that was not indicated in a reqeust </t>
-                <t> As mentioned previously, an extension with trailing zero-bytes </t></list></t>
+                fatal illegal_parameter alert.</t>
         </section>
         <section anchor="iana" title="IANA Considerations">
             <t> IANA is requested to assign a new value from the TLS ExtensionType Values registry:

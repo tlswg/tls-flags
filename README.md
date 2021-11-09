@@ -2,9 +2,9 @@
 
 This is the working area for the individual Internet-Draft, "A Flags Extension for TLS 1.3".
 
-* [Editor's Copy](https://tlswg.github.io/tls-flags/#go.draft-ief-tls-tlsflags.html)
-* [Individual Draft](https://tools.ietf.org/html/draft-ief-tls-tlsflags)
-* [Compare Editor's Copy to Individual Draft](https://tlswg.github.io/tls-flags/#go.draft-ief-tls-tlsflags.diff)
+* [Editor's Copy](https://tlswg.github.io/tls-flags/#go.draft-ietf-tls-tlsflags.html)
+* [Individual Draft](https://tools.ietf.org/html/draft-ietf-tls-tlsflags)
+* [Compare Editor's Copy to Individual Draft](https://tlswg.github.io/tls-flags/#go.draft-ietf-tls-tlsflags.diff)
 
 ## Building the Draft
 

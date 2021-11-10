@@ -21,7 +21,7 @@
 <!ENTITY I-D.ietf-tls-cross-sni-resumption PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-tls-cross-sni-resumption.xml">
 ]>
 
-<rfc category="std" docName="draft-ietf-tls-tlsflags-07" ipr="trust200902">
+<rfc category="std" docName="draft-ietf-tls-tlsflags-08" ipr="trust200902">
     <front>
         <title abbrev="TLS Flags">A Flags Extension for TLS 1.3</title>
         <author initials="Y." surname="Nir" fullname="Yoav Nir">

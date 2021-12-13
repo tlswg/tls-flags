@@ -176,7 +176,11 @@
                 </list>
             </t>
             <t> The policy for this shall be "Specification Required" as described in <xref
-                target="RFC8126"/>.</t>
+                target="RFC8126" section="4.6"/> with the exception of flags numbered from 0-15, which follow 
+	        the "Standards Action" policy (<xref target="RFC8126" section="4.9"/>). 
+                Designated expert(s) are advised to follow the advice in 
+                <xref target="RFC8447" section="17"/> when reviewing registration requests.
+            </t>
             <t> The initial contents of the registry shall be one entry, as follows:
                 <list style="symbols">
                     <t> Value shall be 8 </t>
@@ -186,30 +190,6 @@
                     <t> The reference shall the the RFC-to-be <xref target="I-D.ietf-tls-cross-sni-resumption"/>.</t>
                 </list>
             </t>
-            <section anchor="ianaexp" title="Guidance for IANA Experts">
-                <t> This extension allows up to 2040 flags. However, they are not all the same, because the 
-                    length of the extension is determined by the highest set bit.</t>
-                <t> We would like to allocate the flags in such a way that the typical extension is as short
-                    as possible. The scenario we want to guard against is that in a few years some extension
-                    is defined that all implementations need to support and that is assigned a high number
-                    because all of the lower numbers have already been allocated. An example of such an 
-                    extension is the Renegotiation Indication Extension defined in <xref target="RFC5746"/>.</t>
-                <t> For this reason, the IANA experts should allocate the flags as follows:<list style="symbols">
-                    <t> Flags 0-7 are reserved for documents coming out of the TLS working group with a specific
-                        request to assign a low number.</t>
-                    <t> Flags 8-31 are for standards-track documents that the experts believe will see wide 
-                        adoption among either all users of TLS or a significant group of TLS users. For example,
-                        an extension that will be used by all web clients or all smart objects. The only entry
-                        in the initial registry is from this range.</t>
-                    <t> Flags 32-63 are for other documents, including experimental, that are likely to see 
-                        significant adoption.</t>
-                    <t> Flags 64-79 are not to be allocated. They are for reserved for private use.</t>
-                    <t> Flags 80-2039 can be used for temporary allocation in experiments, for flags that are
-                        likely to see use only in very specific environments, for national and corporate
-                        extensions, and as overflow, in case one of the previous categories has been exhausted.</t>
-                    </list>
-                </t>
-            </section>
         </section>
         <section anchor="sec" title="Security Considerations">
             <t> The extension described in this document provides a more concise way to express data that could

@@ -176,7 +176,7 @@
                 </list>
             </t>
             <t> The policy for this shall be "Specification Required" as described in <xref
-                target="RFC8126" section="4.6"/> with the exception of flags numbered from 0-7, which follow 
+                target="RFC8126" section="4.6"/> with the exception of flags numbered from 0-15, which follow 
 	        the "Standards Action" policy (<xref target="RFC8126" section="4.9"/>). 
                 Designated expert(s) are advised to follow the advice in 
                 <xref target="RFC8447" section="17"/> when reviewing registration requests.

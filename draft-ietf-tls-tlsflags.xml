@@ -152,6 +152,12 @@
             <t> In summary, unsolicited flags may appear only in ClientHello, CertificateRequest, and NewSessionTicket.</t>
             <t> An implementation that receives an invalid tls_flags extension MUST terminate the TLS handshake with a
                 fatal illegal_parameter alert.</t>
+	    <section anchor="zrtt" title="Interaction with the 0-RTT Handshake">
+	        <t> The 0-RTT handshake, defined in section 2.3 of <xref target="RFC8446" />, has a ClientHello message, 
+		    a ServerHello message, and an EncryptedExtensions message. Those can include the tls_flags extension
+		    just as they can in a regular handshake.</t>
+		<t> Future flag extensions MUST define their interaction with 0-RTT, just as other extensions are required to. </t>
+	    </section>
         </section>
         <section anchor="iana" title="IANA Considerations">
             <t> IANA is requested to assign a new value from the TLS ExtensionType Values registry:

@@ -136,7 +136,7 @@
                    a flag extension is typically needed to inform the peer proposing the extension that the other 
                    side understands and supports the extension, but some extensions do not require this
                    acknowledgement.</t>
-            <t> Assuming that an acknowledgement is required, it SHOULD come at the earliest possible opportunity. A
+            <t>A
                 flag proposed by the client in ClientHello (CH) SHOULD be acknowledged in either ServerHello (SH), in 
                 EncryptedExtensions (EE), in Certificate (CT), or in HelloRetryRequest (HRR) as the flag document specifies. 
                 A flag proposed by the server in the CertificateRequest (CR) message SHOULD be acknowledged in the client's

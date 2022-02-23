@@ -230,7 +230,6 @@
             &I-D.sy-tls-resumption-group;
             &I-D.ietf-tls-tls13-cert-with-extern-psk;
             &I-D.ietf-tls-cross-sni-resumption;
-            &I-D.kampanakis-tls-scas-latest;
         </references>
         <section anchor="changelog" title="Change Log">
             <t> RFC EDITOR: PLEASE REMOVE THIS SECTION AS IT IS ONLY MEANT TO AID THE WORKING GROUP IN TRACKING

@@ -139,7 +139,7 @@
             <t>A
                 flag proposed by the client in ClientHello (CH) that requires acknowledgement SHOULD be acknowledged in either ServerHello (SH), in 
                 EncryptedExtensions (EE), in Certificate (CT), or in HelloRetryRequest (HRR) as the corresponding flag document specifies. 
-                A flag proposed by the server in the CertificateRequest (CR) message SHOULD be acknowledged in the client's
+                Similarly, a flag proposed by the server in the CertificateRequest (CR) message that requires acknowledgement SHOULD be acknowledged in the client's
                 Certificate (CT) message. A flag proposed by the server in the NewSessionTicket (NST) message is never 
                 acknowledged as there is not client-side response message.</t>
             <t> Multiple flags can be proposed or acknowledged in the same extension.</t>

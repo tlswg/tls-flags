@@ -132,13 +132,10 @@
         <section anchor="rules" title="Rules for The Flags Extension">
             <t> Any TLS implementation that intends to propose or indicate support for a flag extension SHALL send this
                 extension with the relevant bits set.  It MUST NOT send this extension empty -- with a length of zero.</t>
-            <t> This specification does not require every flag extension to be acknowledged. Acknowledging a flag extension
-                is usually needed to inform the peer proposing the extension that the other side understands and supports
-                the extension, but some extensions do not require this acknowledgement. For example, the extension in
-                <xref target="I-D.kampanakis-tls-scas-latest" /> allows the peer to send an abbreviated certificate chain.
-                The peer need not acknowledge that it supports sending an abbreviated chain. It's enough that it sends 
-                the chain abbreviated. It is up to the document defining a particular flag extension to specify whether that
-                extension requires an acknowledgement or not.</t>
+            <t> This specification does not require every flag extension to be acknowledged. Acknowledging 
+                   a flag extension is typically needed to inform the peer proposing the extension that the other 
+                   side understands and supports the extension, but some extensions do not require this
+                   acknowledgement.</t>
             <t> Assuming that an acknowledgement is required, it SHOULD come at the earliest possible opportunity. A
                 flag proposed by the client in ClientHello (CH) SHOULD be acknowledged in either ServerHello (SH), in 
                 EncryptedExtensions (EE), in Certificate (CT), or in HelloRetryRequest (HRR) as the flag document specifies. 

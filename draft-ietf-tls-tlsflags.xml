@@ -164,6 +164,7 @@
                 <list style="symbols">
                     <t> The Extension Name should be tls_flags</t>
                     <t> The TLS 1.3 value should be CH,SH,HRR,EE,CR,CT,NST</t>
+		    <t> The DTLS-Only value should be N</t>
                     <t> The Recommended value should be Y</t>
                     <t> The Reference should be this document</t>
                 </list>

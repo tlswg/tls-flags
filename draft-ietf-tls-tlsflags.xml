@@ -23,7 +23,7 @@
 <!ENTITY I-D.kampanakis-tls-scas-latest PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.kampanakis-tls-scas-latest.xml">
 ]>
 
-<rfc category="std" docName="draft-ietf-tls-tlsflags-09" ipr="trust200902">
+<rfc category="std" docName="draft-ietf-tls-tlsflags-10" ipr="trust200902">
     <front>
         <title abbrev="TLS Flags">A Flags Extension for TLS 1.3</title>
         <author initials="Y." surname="Nir" fullname="Yoav Nir">
@@ -136,6 +136,8 @@
                    a flag extension is typically needed to inform the peer proposing the extension that the other 
                    side understands and supports the extension, but some extensions do not require this
                    acknowledgement.</t>
+            <t> For a flag that does require a response, the only proper response is the same flag in a flags extension. This extension 
+		MUST NOT be used to specify extensions where the response is a proper extension with content.</t>
             <t>A
                 flag proposed by the client in ClientHello (CH) that requires acknowledgement SHOULD be acknowledged in either ServerHello (SH), in 
                 EncryptedExtensions (EE), in Certificate (CT), or in HelloRetryRequest (HRR) as the corresponding flag document specifies. 

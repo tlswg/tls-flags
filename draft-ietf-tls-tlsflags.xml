@@ -23,7 +23,7 @@
 <!ENTITY I-D.kampanakis-tls-scas-latest PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.kampanakis-tls-scas-latest.xml">
 ]>
 
-<rfc category="std" docName="draft-ietf-tls-tlsflags-10" ipr="trust200902">
+<rfc category="std" docName="draft-ietf-tls-tlsflags-11" ipr="trust200902">
     <front>
         <title abbrev="TLS Flags">A Flags Extension for TLS 1.3</title>
         <author initials="Y." surname="Nir" fullname="Yoav Nir">

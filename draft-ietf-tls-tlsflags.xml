@@ -80,7 +80,7 @@
                 <t> The term "flag extension" is used to denote an extension where the extension_data field is
                     always zero-length in a particular context, and the presence of the extension denotes
                     either support for some feature or the intent to use that feature.</t>
-                <t> The term "flag-type feature" denotes an options TLS 1.3 feature the support for which is
+                <t> The term "flag-type feature" denotes an optional TLS 1.3 feature the support for which is
                     negotiated using a flag extension, whether that flag extension is its own extension or a
                     value in the extension defined in this document.</t>
             </section>
@@ -147,7 +147,7 @@
             <t> Multiple flags can be proposed or acknowledged in the same extension.</t>
             <t> In all of the above cases, a flag MUST NOT be acknowledged in SH, EE, CT, or HRR without first having been
                 proposed in CH or CR. Unsolicited flags may appear only in CH, CR, and NST.
-                And endpoint that receives an unsolicited flag in another message (HRR, SH, EE, or CT)
+                An endpoint that receives an unsolicited flag in another message (HRR, SH, EE, or CT)
                 MUST generate a fatal illegal_parameter alert.</t>
             <t> A client that supports this extension and at least one flag extension SHALL send this extension 
                 with the flags field having bits set only for those extensions that it intends to set. It MUST 

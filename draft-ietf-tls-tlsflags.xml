@@ -17,6 +17,7 @@
 <!ENTITY RFC8447 PUBLIC "" "http://xml.resource.org/public/rfc/bibxml/reference.RFC.8447.xml">
 <!ENTITY RFC8126 PUBLIC "" "http://xml.resource.org/public/rfc/bibxml/reference.RFC.8126.xml">
 <!ENTITY RFC5746 PUBLIC "" "http://xml.resource.org/public/rfc/bibxml/reference.RFC.5746.xml">
+<!ENTITY I-D.ietf-tls-rfc8447bis PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-tls-rfc8447bis.xml">
 <!ENTITY I-D.sy-tls-resumption-group PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.sy-tls-resumption-group.xml">
 <!ENTITY I-D.ietf-tls-tls13-cert-with-extern-psk PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-tls-tls13-cert-with-extern-psk.xml">
 <!ENTITY I-D.ietf-tls-cross-sni-resumption PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-tls-cross-sni-resumption.xml">
@@ -179,8 +180,7 @@
                    <t> Flag Name, which is a string</t>
                    <t> Message, which like the "TLS 1.3" field in the ExtensionType registry contains the
                        abbreviations of the messages that may contain the flag: CH, SH, EE, etc.</t>
-                   <t> Recommended, which is a Y/N value determined in the document defining the optional
-                       feature.</t>
+                   <t> Recommended, which is a Y/N/D value; see <xref target="I-D.ietf-tls-rfc8447bis" section="3">.</t>
                    <t> Reference, which is a link to the document defining this flag.</t>
                 </list>
             </t>
@@ -226,6 +226,7 @@
             &RFC8174;
             &RFC8446;
             &RFC8447;
+            &I-D.ietf-tls-rfc8447bis;	 
         </references>
         <references title="Informative References">
             &RFC8126;

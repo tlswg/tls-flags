@@ -13,10 +13,10 @@
 <!DOCTYPE rfc SYSTEM "rfc2629.dtd" [
 <!ENTITY RFC2119 PUBLIC "" "http://xml.resource.org/public/rfc/bibxml/reference.RFC.2119.xml">
 <!ENTITY RFC8174 PUBLIC "" "http://xml.resource.org/public/rfc/bibxml/reference.RFC.8174.xml">
-<!ENTITY RFC8446 PUBLIC "" "http://xml.resource.org/public/rfc/bibxml/reference.RFC.8446.xml">
 <!ENTITY RFC8447 PUBLIC "" "http://xml.resource.org/public/rfc/bibxml/reference.RFC.8447.xml">
 <!ENTITY RFC8126 PUBLIC "" "http://xml.resource.org/public/rfc/bibxml/reference.RFC.8126.xml">
 <!ENTITY RFC5746 PUBLIC "" "http://xml.resource.org/public/rfc/bibxml/reference.RFC.5746.xml">
+<!ENTITY I-D.ietf-tls-rfc8446bis PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-tls-rfc8446bis.xml">
 <!ENTITY I-D.ietf-tls-rfc8447bis PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-tls-rfc8447bis.xml">
 <!ENTITY I-D.sy-tls-resumption-group PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.sy-tls-resumption-group.xml">
 <!ENTITY I-D.ietf-tls-tls13-cert-with-extern-psk PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.ietf-tls-tls13-cert-with-extern-psk.xml">
@@ -52,7 +52,7 @@
     </front>
     <middle>
         <section anchor="intro" title="Introduction">
-            <t> Since the publication of TLS 1.3 (<xref target="RFC8446" />) there have been several proposals
+            <t> Since the publication of TLS 1.3 (<xref target="I-D.ietf-tls-rfc8446bis" />) there have been several proposals
                 for extensions to this protocol, where the presence of the content-free extension in both the
                 ClientHello and either the ServerHello or EncryptedExtensions indicates nothing except either
                 support for the optional feature or an intent to use the optional feature. Examples:<list
@@ -156,7 +156,7 @@
             <t> An implementation that receives an invalid tls_flags extension MUST terminate the TLS handshake with a
                 fatal illegal_parameter alert.</t>
 	    <section anchor="zrtt" title="Interaction with the 0-RTT Handshake">
-	        <t> The 0-RTT handshake, defined in section 2.3 of <xref target="RFC8446" />, has a ClientHello message, 
+	        <t> The 0-RTT handshake, defined in section 2.3 of <xref target="I-D.ietf-tls-rfc8446bis" />, has a ClientHello message, 
 		    a ServerHello message, and an EncryptedExtensions message. Those can include the tls_flags extension
 		    just as they can in a regular handshake.</t>
 		<t> Future flag extensions MUST define their interaction with 0-RTT, just as other extensions are required to. </t>
@@ -224,7 +224,7 @@
         <references title="Normative References">
             &RFC2119;
             &RFC8174;
-            &RFC8446;
+            &I-D.ietf-tls-rfc8446bis;
             &RFC8447;
             &I-D.ietf-tls-rfc8447bis;	 
         </references>

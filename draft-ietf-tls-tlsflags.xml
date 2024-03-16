@@ -24,7 +24,7 @@
 <!ENTITY I-D.kampanakis-tls-scas-latest PUBLIC "" "http://xml.resource.org/public/rfc/bibxml3/reference.I-D.kampanakis-tls-scas-latest.xml">
 ]>
 
-<rfc category="std" docName="draft-ietf-tls-tlsflags-11" ipr="trust200902">
+<rfc category="std" docName="draft-ietf-tls-tlsflags-13" ipr="trust200902">
     <front>
         <title abbrev="TLS Flags">A Flags Extension for TLS 1.3</title>
         <author initials="Y." surname="Nir" fullname="Yoav Nir">
@@ -238,6 +238,7 @@
         <section anchor="changelog" title="Change Log">
             <t> RFC EDITOR: PLEASE REMOVE THIS SECTION AS IT IS ONLY MEANT TO AID THE WORKING GROUP IN TRACKING
                 CHANGES TO THIS DOCUMENT.</t>
+            <t> draft-ietf-tls-tlsflags-13 align with 8446bis and 8447bis</t>
             <t> draft-ietf-tls-tlsflags-02 set the maximum number of flags to 2048, and added guidance for
                 the IANA experts.</t>
             <t> draft-ietf-tls-tlsflags-01 allows server-only flags and allows the client to send an empty 

@@ -126,9 +126,7 @@
                 trailing zero bytes MUST generate a fatal illegal_parameter alert.</t>
             <t> Note that this document does not define any particular bits for this string. That is left to
                 the protocol documents such as the ones in the examples from the previous section. Such
-                documents will have to define which bit to set to show support, and the order of the bits
-                within the bit string shall be enumerated in network order: bit zero is the high-order bit of
-                the first octet as the flags field is transmitted.</t>
+                documents will have to define which bit to set to show support.</t>
         </section>
         <section anchor="rules" title="Rules for The Flags Extension">
             <t> Any TLS implementation that intends to propose or indicate support for a flag extension SHALL send this

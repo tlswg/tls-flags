@@ -130,7 +130,7 @@
         </section>
         <section anchor="rules" title="Rules for The Flags Extension">
             <t> Any TLS implementation that intends to propose or indicate support for a flag extension SHALL send this
-                extension with the relevant bits set.  It MUST NOT send this extension empty -- with a length of zero.</t>
+                extension with the relevant bits set.</t>
             <t> This specification does not require every flag extension to be acknowledged. Acknowledging 
                    a flag extension is typically needed to inform the peer proposing the extension that the other 
                    side understands and supports the extension, but some extensions do not require this
